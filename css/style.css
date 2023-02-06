@@ -1,18 +1,19 @@
-@import url(reset.css);
-@import url('https://fonts.googleapis.com/css2?family=Handlee&family=Montserrat:wght@400;700&display=swap');
+/* NORMALIZACION */
+@import url(./reset.css);
+@import url('https://fonts.googleapis.com/css2?family=Handlee&family=Libre+Baskerville:wght@400;700&family=Montserrat:wght@400;700&display=swap');
+/*     font-family: 'Handlee', cursive;
+    font-family: 'Libre Baskerville', serif;
+    font-family: 'Montserrat', sans-serif; 
+    color-principal: #fa573a
+    color-azul: #21242e;
+    */
 
-
-/* font-family: 'Handlee', cursive;
-font-family: 'Montserrat', sans-serif;
-color-principal:#fa573a
-color-azul:#21242e; */
-
-html{
-    /* para generar animaciones de puntos de ancla */
+html {
+    /* PARA GENERAR ANIMACIONES DE PUNTOS DE ANCLA */
     scroll-behavior: smooth;
 }
 
-:root{
+:root {
     --fuenteprincipal: 'Montserrat', sans-serif;
     --fuentetitulos: 'Handlee', cursive;
     --colorprincipal: #fa573a;
@@ -22,200 +23,318 @@ html{
     --anchomaximo: 1100px;
 }
 
-*{
+* {
     box-sizing: border-box;
 }
 
-img{
+img {
+    /* ESTO DEBE APLICARSE DE FORMA MECANICA SIEMPRE QUE HAYA IMAGENES  */
     width: 100%;
+    /* imagenes adaptarse al 100% de su contenedor */
     height: auto;
     display: block;
+    /* Que se comporte como bloque porque es un elemento en linea */
 }
 
-.container{
+/* ENCORSETADO: CREAR CLASE GENERICA PARA APLICARLE EL ANCHO MAXIMO, EN ESTE CASO EL QUE HEMOS DEFINIDO EN LA VARIABLE ANCHO MAXIMO */
+
+.container {
     max-width: var(--anchomaximo);
     margin: 0 auto;
 }
 
-body{
+body {
     font-family: var(--fuenteprincipal);
     font-size: var(--fontsize);
 }
 
+/* INICIO HEADER */
 
-/* inicio header*/
+header .nav-top {
+    background-color: var(--colorsecundario);
+    padding: 1.250em 0;
 
-header .nav-top{
-background-color: var(--colorsecundario);
-padding: 1.250em 0;
 }
 
-header .nav-top .container{
+/*  */
+header .nav-top .container {
     display: flex;
     justify-content: space-around;
 }
 
-header .nav-top a{
+header .nav-top a {
     text-decoration: none;
     color: var(--colorprincipal);
 }
 
-header .nav-top a i{
+header .nav-top a i {
     font-size: 150%;
 }
 
-header .nav-top a span{
+header .nav-top a span {
     color: white;
     display: none;
 }
 
-header nav{
+header nav {
     padding: 1.250em;
 }
 
-header .hamburguesa{
+header .hamburguesa {
     width: 1.875em;
     cursor: pointer;
+    /* Que tenga la manita cuando nos ponemos encima */
 }
 
-header .hamburguesa div{
+header .hamburguesa div {
     border-top: 2px solid #aaa;
     margin-bottom: 0.625em;
 }
 
-
-header nav .container{
+header nav .container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    /* se reparten el espacio uno a la izquierda y otro a la derecha */
+    /* hasta que les definamos medida se reparten el espacio */
 }
 
-header nav .menu{
+header nav .menu {
     width: 100%;
+    /* Poniendole un ancho del 100% al menu los otros dos elementos no caben junto a este e inmediatamente se ponen encima repartiendose el espacio al 50% porque son dos elementos */
     padding-top: 1.25em;
 }
 
-header .logo{
-max-width: 100px;
+header .logo {
+    max-width: 100px;
 }
 
-header .menu a{
+header .menu a {
     display: block;
+    /* Para que toda la zona del enlace sea clicable, no solo la palabra */
     text-align: center;
     padding: 1.25em;
     text-decoration: none;
+    /* eliminamos el subrayado */
     color: #aaa;
     border-bottom: 1px solid #aaa;
     transition: 0.5s;
 }
 
-header .menu li:last-child a{
-border-bottom: 0px;
+header .menu a:hover {
+    /* Cuando pasemos con el raton pasara lo que pongaos dentro del hover */
+    color: var(--colorprincipal);
+    transition: 0.5s;
 }
 
-header .menu .activo{
+header .menu li:last-child a {
+    border-bottom: none;
+}
+
+header .menu .activo {
     color: var(--colorprincipal);
 }
 
-header .menu a:hover{
-    color: var(--colorprincipal);
-    transition: 0.3s;
-}
-/*final header */
 
+/* FIN HEADER */
 
-/* hero */
-
-.hero{
+/* INICIO HERO */
+.hero {
     background-image: url(../assets/images/fondo.jpg);
+    /* Podemos ponerle padding para generar mayor distancia, tanto arriba y abajo como a la derecha, o podemos ponerle un height */
     height: 60vh;
+    /* la imagen esta mas oscurecida, se hace con BACKGROUND BLEND */
     background-color: #777;
     background-blend-mode: multiply;
     background-position: center center;
     background-size: cover;
+    /* Que la imagen se adapte al espacio que lo contiene */
     color: white;
+    /* padding: 200px 0px 200px 30px;  El problema de esto es que la medida siempre es fija; los % en los padding son dificiles de manejar. La mejor solucion es ponerle una altura en vh*/
     height: 60vh;
-   
-
 }
 
-.hero .container{
+.hero .container {
     width: 90%;
+    /* Para que quede alineado */
     display: flex;
+    /* Como todo se pone en linea se arregla con flex direction */
     flex-direction: column;
+    /* Para que siga en columnas */
     justify-content: center;
+    /* Al centro en la vertical */
     height: 100%;
+    /* Le ponemos el 100% de la altura del hero */
 }
 
-
-.hero h1{
+.hero h1 {
     font-family: var(--fuentetitulos);
     font-size: 2.25em;
+    /* padding podriamos poner si el fondo es transparente, en este caso lo es */
 }
 
-.hero h2{
+.hero h2 {
     color: var(--colorprincipal);
     font-size: 1.25em;
     margin: var(--margingrid) 0;
 }
 
-.hero p{
+.hero p {
     font-size: 1.15em;
 }
 
-.boton{
+/* Voy a volver a utilizar boton, porque hay otro más abajo, no pondremos .hero .boton, sino que generalizaremos */
+
+.boton {
     display: inline-block;
     background-color: var(--colorprincipal);
     padding: 1.15em;
-    color: white;
+    /* Ahora es un elemento en bloque y podemos ponerle padding */
     text-decoration: none;
+    color: white;
     border: 1px solid var(--colorprincipal);
+    /* Como el borde es del mismo color no se va a ver y quedara cuando hagamos el hover */
     margin: var(--margingrid) 0;
 }
 
-.boton:hover{
+.boton:hover {
     background-color: transparent;
     color: var(--colorprincipal);
 }
 
-.boton:hover i{
+.boton:hover i {
     transition: transform 0.5s;
     transform: translateX(5px) scale(1.15);
 }
 
-.hero .social{
+.hero .social {
     display: flex;
     width: 160px;
     justify-content: space-between;
 }
 
-.hero .social a{
+.hero .social a {
     color: white;
     font-size: 2em;
 }
 
-/* fin hero */
-/* inicio footer */
-footer{
+/* FIN HERO */
+
+/* INICIO OURSERVICE */
+
+main section {
+    padding: 2.188em 1.5em;
+}
+
+main section h2 {
+    color: black;
+    font-family: var(--fuentetitulos);
+    font-size: 2em;
+    text-align: center;
+}
+
+main section h2 span {
+    color: var(--colorprincipal);
+}
+
+main section .underline {
+    position: relative;
+    /* El contenedor siempre en posicion relativa */
+    width: 6.250em;
+    margin: 0 auto;
+    color: var(--colorprincipal);
+    font-weight: 700;
+    margin-bottom: var(--margingrid);
+}
+
+main section .underline hr {
+    border-color: var(--colorprincipal);
+    /* La linea al ser un hr se cambia de color con BORDER COLOR */
+    position: absolute;
+    /* La x cambia de capa y sube hacia arriba, hay que darle un width para que tenga una medida */
+    width: 100%;
+    top: -1px;
+}
+
+main section .underline span {
+    text-align: center;
+    /* para alinear al centro */
+    display: block;
+    /* le damos este display para que funcione */
+}
+
+
+main #ourservices .grid {
+    display: grid;
+    grid-column: 1fr;
+    gap: var(--margingrid);
+}
+
+main #ourservices article {
+    border-bottom: 1px solid #aaa;
+    padding: 1.5em 0;
+}
+
+main #ourservices article i:not(.fa-long-arrow-alt-right) {
+    /* pseudoselector not elegimos al i que no queremos atacar */
+    color: var(--colorprincipal);
+    font-size: 140%;
+    border: 1px solid var(--colorprincipal);
+    display: inline-block;
+    /* es un elemento en linea, le ponemos display block para ponerle padding*/
+    padding: 0.5em;
+}
+
+main #ourservices h3 {
+    font-weight: 700;
+    /* para ponerlo en negrita */
+    margin: 10px 0;
+    font-size: 110%;
+}
+
+main #ourservices p {
+    color: #777;
+    line-height: 1.25em;
+    margin-bottom: 0.5em;
+}
+
+.enlace {
+    text-decoration: none;
+    color: var(--colorprincipal);
+    font-weight: 700;
+}
+
+.fa-truck {
+    transform: rotateY(180deg);
+}
+
+/* FIN OURSERVICE */
+
+/* INCIO FOOTER */
+
+footer {
     background-color: var(--colorsecundario);
-    padding: 1.250em 0px;
+    padding: 1.250em 0;
     text-align: center;
     color: white;
     position: fixed;
+    /* Ponemos posicion fija, pierde la referencia de lo que teniamos arriba, porque cambiamos de capa, hay que ponerle un width para que se adapte al contenedor */
     bottom: 0;
+    /* fijada la posicion, fijamos que se quede siempre abajo */
     width: 100%;
+    /* Al cambiar de capa pierde la referencia del contenedor, hay que añadirle el width para que se adapte al contenedor */
 }
 
-footer a{
+footer a {
     color: white;
     text-decoration: none;
 }
 
-footer a:hover{
+footer a:hover {
     color: var(--colorprincipal);
 }
 
-.flecha a{
+.flecha a {
     display: block;
     color: var(--colorprincipal);
     position: fixed;
@@ -223,44 +342,78 @@ footer a:hover{
     right: 10px;
     font-size: 250%;
 }
-/* fin del footer */
-/* mediaqueries */
 
-@media(min-width: 48.000em){
 
-    header .nav-top a span{
-    display: inline;
-    font-size: 110%;
+/* FINAL FOOTER */
+
+/* MEDIAQUERY 600PX */
+
+@media(min-width:37.50em) {
+    main #ourservices .grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    main #ourservices article:nth-last-child {
+        grid-column: 1/3;
+    }
+
+    main #ourservices article {
+        border-bottom: none;
+        border-left: 1px solid #aaa;
+        padding: 1.5em;
+    }
 }
 
 
-header .nav-top .container{
-    display: flex;
-    justify-content: space-around;
+/* MEDIAQUERY 768PX*/
+@media(min-width: 48.000em) {
+    header .nav-top a span {
+        display: inline;
+        /* span es un elemento en linea, no podemos convertilo en block */
+        font-size: 110%;
+    }
+
+    header .nav-top .container {
+        justify-content: space-between;
+    }
+
+    /* QUEDA PENDIENTE AJUSTAR LOS MARGENES DEL NAV-TOP */
+
+    footer {
+        text-align: left;
+    }
+
+    main #ourservices .grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    main #ourservices article:last-child {
+        grid-column: 3/4;
+    }
 }
 
-footer{
-    text-align: left;
-}
-}
 
-@media(min-width: 62.750em){
-    header .hamburguesa{
+/* MEDIAQUERY 1004 PX */
+@media(min-width: 62.750em) {
+    header .hamburguesa {
         display: none;
     }
 
-    header nav .menu{
-        padding-top: 0em;
+    header nav .menu {
+        padding-top: 0;
         width: auto;
+        /* Que elija segun el tamaño del elemento ys e adapte al dispositivo que lo contiene */
     }
 
-    header nav .menu li{
+    header nav .menu li {
         display: inline-block;
     }
 
-    header .menu a{
-        border-bottom: 0px;
-        padding: 0.5em 0 0.5em 1.25em;
+    header .menu a {
+        border-bottom: none;
+        padding: 0.5em 0.5em 0.75em;
     }
-
 }
+
+
+/* FIN MEDIAQUERY */
