@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hamburgueseria Rovers</title>
+    <title>Hamburgueseria</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
         integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
@@ -13,107 +13,143 @@
 </head>
 
 <body id="top">
-
     <div class="wrapper">
         <header>
             <div class="nav-top">
                 <div class="container">
                     <div>
-                        <a href="mailto:hamburgueseriarover@gmail.com">
+                        <a href="mailto:rover@gmail.com">
                             <i class="fas fa-envelope"></i>
-                            <span>hamburgueseriarover@gmail.com</span>
-                        </a>
-                    </div>
-                    <div>
-                        <a href="tel:91 555 66 77">
-                            <i class="fa-solid fa-phone-flip"></i>
-                            <span>91 555 66 77</span></a>
-                    </div>
-                    <div>
-                        <a href="#">
-                            <i class="fas fa-shopping-cart"></i>
-                            <span>Carrito Compra</span>
+                            <span>rover@gmail.com</span>
                         </a>
                     </div>
                     <div>
                         <a href="#">
-                            <i class="fas fa-user-circle"></i>
-                            <span>Usuario</span>
+                            <i class="fa-solid fa-phone-flip"></i><span>915556677</span>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#">
+                            <i class="fas fa-shopping-cart"></i><span>Carrito Compra</span>
+                        </a>
+                    </div>
+                    <div>
+                        <a href="#">
+                            <i class="fas fa-user-circle"></i><span>Usuario</span>
                         </a>
                     </div>
                 </div>
             </div>
             <nav>
                 <div class="container">
-                    <figure class="logo">
+                    <figure class="logo"> <!-- CAJA LOGO -->
                         <a href="index.html">
                             <img src="./assets/images/logo.jpg" alt="Rovers">
                         </a>
                     </figure>
-                    <div class="hamburguesa">
+                    <div class="hamburguesa"> <!-- las 3 rallas por separado para poder animarlas despues -->
                         <div></div>
                         <div></div>
                         <div></div>
                     </div>
+
                     <ul class="menu">
                         <li><a class="activo" href="index.html">Inicio</a></li>
                         <li><a href="blog.html">Blog</a></li>
                         <li><a href="menu.html">Menu</a></li>
-                        <li><a href="team.html">Equipo</a></li>
+                        <li><a href="team.html">Team</a></li>
                     </ul>
-
-
                 </div>
             </nav>
         </header>
-
         <div class="hero">
             <div class="container">
                 <h1>Las mejores hamburguesas del mundo</h1>
-                <h2>Bienvenido a nuestra hamburgueseria</h2>
-                <p>Compra partir de 15€</p>
+                <h2>Bienvenido a nuestra hamburguesería</h2>
+                <p>Come a partir de 15€</p>
                 <div>
-                    <a href="#" class="boton">
-                        Nuestra carta
+                    <!-- Creo un div para poder usarlo como boton en linea, aunque en los de esta pagina le pondrems el display en block, porque va debajo de todo -->
+                    <a href="#" class="boton">Nuestra carta
                         <i class="fas fa-long-arrow-alt-right"></i>
                     </a>
                 </div>
                 <ul class="social">
-                    <li><a href="http://www.facebook.com" target="_blank">
+                    <li><a href="http://www.facebook.com" target="_blank
+                        ">
                             <i class="fab fa-facebook"></i>
-                        </a></li>
-
-                    <li><a href="http://www.twitter.com" target="_blank">
+                        </a>
+                    </li>
+                    <li><a href="http://www.twitter.com" target="_blank
+                        ">
                             <i class="fab fa-twitter"></i>
-                        </a></li>
-
-                    <li><a href="http://www.instagram.com" target="_blank">
+                        </a>
+                    </li>
+                    <li><a href="http://www.instagram.com" target="_blank
+                        ">
                             <i class="fab fa-instagram"></i>
-                        </a></li>
-
-
+                        </a>
+                    </li>
                 </ul>
-
-
-
-
-
-
-
             </div>
-
-
         </div>
         <main>
+            <section id="ourservices">
+                <!-- Ponemos identificador y no se puede repetir, me sirve para coger estilos especificos sobre esa seccion, me paermite sobreescribir sobre las reglas genericas section porque tiene mayor especificidad -->
+                <div class="container">
+                    <h2>Our <span> Service</span></h2>
+                    <div class="underline">
+                        <hr noshade="nosahade"> <!-- noshade porque es un visel con sombra --> <span>X</span>
+                    </div>
+                    <div class="grid">
+                        <article>
+                            <div>
+                                <i class="fas fa-cogs"></i>
+                            </div>
+                            <h3>1. Carne 100% natural</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, quaerat.</p>
+                            <div>
+                                <a class="enlace" href="">Leer más
+                                    <i class="fas fa-long-arrow-alt-right"></i>
+                                </a>
+                            </div>
+                        </article>
 
+                        <article>
+                            <div>
+                                <i class="fas fa-truck"></i>
+                            </div>
+                            <h3>2. Cocina moderna</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, quaerat.</p>
+                            <div>
+                                <a class="enlace" href="enlace">Leer más
+                                    <i class="fas fa-long-arrow-alt-right"></i>
+                                </a>
+                            </div>
+                        </article>
+
+                        <article>
+                            <div>
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <h3>3. Servicio impecable</h3>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, quaerat.</p>
+                            <div>
+                                <a class="enlace" href="">Leer más
+                                    <i class="fas fa-long-arrow-alt-right"></i>
+                                </a>
+                            </div>
+                        </article>
+
+                    </div>
+                </div>
+            </section>
         </main>
-
-
         <footer>
             <div class="container">
-                <p>Copyright&copy;2023
-                    - <a href="#">Aviso legal</a>
-                    - <a href="#">Cookies</a>
+                <p>Copyright&copy; 2023
+                    -
+                    <a href="#">Aviso Legal</a> -
+                    <a href="#">Cookies</a>
                 </p>
             </div>
         </footer>
@@ -121,9 +157,14 @@
             <a href="#top">
                 <i class="fas fa-caret-square-up"></i>
             </a>
-
         </div>
+
     </div>
+
+    <!-- PUNTOS DE ANCLA 
+Hay que poner un id donde queremos ir cuando cliquemos ahi y un a href dentro del icono que ejerce de punto de ancla -->
+
+
 </body>
 
 </html>
