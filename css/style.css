@@ -348,6 +348,38 @@ main #aboutus figure:hover :is(.marco, img){
     transform: rotateX(0deg);
 }
 /* FINAL ABOUT US */
+
+
+/* INICIO OUR BLOG */
+
+main #ourblog .flexblog{
+    display: flex;
+    gap: var(--margingrid);
+}
+ 
+main #ourblog h3{
+    font-family: var(--fuenteprincipal);
+    font-weight: 400;
+    font-size: 110%;
+   margin: 10px 0;
+}
+
+main #ourblog h4{
+    margin: 1em 0;
+    color: var(--colorprincipal);
+    font-weight: 700;
+    font-size: small;
+}
+
+main section p{
+    color: #777;
+    line-height: 1.35em;
+    font-size: smaller;
+    margin-bottom: 0.5em;
+}
+
+
+/* FIN DE OUR BLOG */
 /* INCIO FOOTER */
 
 footer {
