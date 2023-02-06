@@ -374,10 +374,44 @@ main #ourblog h4{
 main section p{
     color: #777;
     line-height: 1.35em;
-    font-size: smaller;
+    font-size: small;
     margin-bottom: 0.5em;
+    font-weight: 400;
 }
 
+#ourblog figure{
+    position: relative;
+}
+#ourblog .boton{
+    background-color: white;
+    color: var(--colorprincipal);
+    border: 0px;
+      font-weight: 700;
+    font-size: small;
+    margin-top: 0px;
+}
+
+#ourblog .fecha{
+    width: 3.125em;
+    height: 3.125em;
+    background-color: var(--colorprincipal);
+    opacity: 0.75;
+    color: white;
+    font-weight: 700;
+    font-size: small;
+    text-align: center;
+   justify-content: center;
+    align-content: center;
+    position: absolute;
+    top: 0px;
+    padding-top: 5px;
+
+}
+
+.textoblog{
+    margin-left: 5%;
+}
+/* FALTA MEJORAR LAS FECHAS */
 
 /* FIN DE OUR BLOG */
 /* INCIO FOOTER */
