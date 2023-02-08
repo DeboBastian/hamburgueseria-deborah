@@ -348,6 +348,83 @@ main #aboutus figure:hover :is(.marco, img){
     transform: rotateX(0deg);
 }
 /* FINAL ABOUT US */
+
+
+/* INICIO OUR BLOG */
+
+main #ourblog .flexblog{
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--margingrid);
+   
+}
+
+ main #ourblog article{
+width: calc(50% - var(--margingrid));
+    margin: 0 auto;
+ }
+
+ main #ourblog article:last-child{
+    width: 100%;
+ }
+main #ourblog h3{
+    font-family: var(--fuenteprincipal);
+    font-weight: 400;
+    font-size: 110%;
+   margin: 10px 0;
+}
+
+main #ourblog h4{
+    margin: 1em 0;
+    color: var(--colorprincipal);
+    font-weight: 700;
+    font-size: small;
+}
+
+main section p{
+    color: #777;
+    line-height: 1.35em;
+    font-size: small;
+    margin-bottom: 0.5em;
+    font-weight: 400;
+}
+
+#ourblog figure{
+    position: relative;
+}
+#ourblog .boton{
+    background-color: white;
+    color: var(--colorprincipal);
+    border: 0px;
+      font-weight: 700;
+    font-size: small;
+    margin-top: 0px;
+}
+
+#ourblog .fecha{
+    width: 3.125em;
+    height: 3.125em;
+    background-color: var(--colorprincipal);
+    background-blend-mode: color;
+    opacity: 0.75;
+    color: white;
+    font-weight: 700;
+    font-size: small;
+    text-align: center;
+   justify-content: center;
+    align-content: center;
+    position: absolute;
+    top: 0px;
+    padding-top: 5px;
+
+}
+
+.textoblog{
+    margin-left: 5%;
+}
+/* FALTA MEJORAR LAS FECHAS */
+
+/* FIN DE OUR BLOG */
 /* INCIO FOOTER */
 
 footer {
@@ -404,12 +481,18 @@ footer a:hover {
     main#aboutus .flex{
     
     flex-direction: row;
-    
-}
-}
+    }
 
 
-/* MEDIAQUERY 768PX*/
+main #ourblog article{
+width: calc(33.333% - var(--margingrid));
+
+ }
+ main #ourblog article:last-child{
+    width: calc(33.333% - var(--margingrid));
+ }
+}
+/* MEDIAQUER 768PX*/
 @media(min-width: 48.000em) {
     header .nav-top a span {
         display: inline;
@@ -434,9 +517,16 @@ footer a:hover {
     main #ourservices article:last-child {
         grid-column: 3/4;
     }
+
+ main #ourblog article{
+width: calc(33.333% - var(--margingrid));
+
+ }
+
+ main #ourblog article:last-child{
+    width: calc(33.333% - var(--margingrid));
+ }
 }
-
-
 /* MEDIAQUERY 1004 PX */
 @media(min-width: 62.750em) {
     header .hamburguesa {
@@ -457,6 +547,8 @@ footer a:hover {
         border-bottom: none;
         padding: 0.5em 0.5em 0.75em;
     }
+ 
+
 }
 
 
