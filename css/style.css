@@ -399,6 +399,7 @@ main section p{
       font-weight: 700;
     font-size: small;
     margin-top: 0px;
+    margin-bottom: 20px;
 }
 
 #ourblog .fecha{
@@ -425,9 +426,106 @@ main section p{
 /* FALTA MEJORAR LAS FECHAS */
 
 /* FIN DE OUR BLOG */
+
+/* INICIO MENU  */
+#menu{
+    background-color: var(--colorsecundario);
+}
+
+#menu .container{
+    margin-left: 3.125em;
+    margin-right: 3.125em;
+}
+ #menu h2{
+    color: white;
+ }
+
+
+ #menu span{
+    margin-bottom: 3.125em;
+}
+
+.menuizquierda nav ul div{
+    display: flex;
+    flex-direction: column;   
+}
+
+.menuizquierda nav ul div a{
+    margin-top: 0px;
+    margin-bottom: 0px;
+    background-color: var(--colorsecundario);
+    border-radius: 7px;
+    border: 0px;
+    font-weight: 700;
+    font-size: larger;
+
+}
+
+.menuizquierda nav ul div a:hover{
+background-color: var(--colorprincipal);
+color: white;
+transition: 0.5s;
+}
+
+.menuizquierda div:last-child{
+
+margin-bottom: 3.75em;
+}
+
+.menuizquierda article h4{
+    color: white;
+    font-weight: 700;
+    font-size: 130%;
+}
+
+.menuizquierda article hr{
+    color:var(--colorprincipal);
+    width: 65px;
+    margin-left: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.menuizquierda article p{
+color: white;
+text-align: justify;
+margin-bottom: 30px;
+}
+
+#menu .flex{
+    margin-left: 20px;
+}
+
+#menu .flex figure div{
+    color: var(--colorprincipal);
+    font-weight: 700;
+    right: 100px;
+    margin-top: 1.25em;
+    position: absolute;
+}
+
+#menu .menus h3{
+color: white;
+font-weight: 700;
+margin-top: 1.25em;
+margin-bottom: 0.625em;
+max-width: 80%;
+}
+
+#menu .menus p{
+    color: white;
+    margin-bottom: 0.625em;
+}
+
+#menu .orderNow{
+margin-top: 1.25em;
+margin-bottom: 3.25em;
+}
+/* FIN MENU */
 /* INCIO FOOTER */
 
 footer {
+    
     background-color: var(--colorsecundario);
     padding: 1.250em 0;
     text-align: center;
@@ -438,6 +536,7 @@ footer {
     /* fijada la posicion, fijamos que se quede siempre abajo */
     width: 100%;
     /* Al cambiar de capa pierde la referencia del contenedor, hay que añadirle el width para que se adapte al contenedor */
+    
 }
 
 footer a {
