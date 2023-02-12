@@ -9,7 +9,6 @@
     */
 
 html {
-    /* PARA GENERAR ANIMACIONES DE PUNTOS DE ANCLA */
     scroll-behavior: smooth;
 }
 
@@ -28,15 +27,10 @@ html {
 }
 
 img {
-    /* ESTO DEBE APLICARSE DE FORMA MECANICA SIEMPRE QUE HAYA IMAGENES  */
     width: 100%;
-    /* imagenes adaptarse al 100% de su contenedor */
     height: auto;
     display: block;
-    /* Que se comporte como bloque porque es un elemento en linea */
 }
-
-/* ENCORSETADO: CREAR CLASE GENERICA PARA APLICARLE EL ANCHO MAXIMO, EN ESTE CASO EL QUE HEMOS DEFINIDO EN LA VARIABLE ANCHO MAXIMO */
 
 .container {
     max-width: var(--anchomaximo);
@@ -83,7 +77,6 @@ header nav {
 header .hamburguesa {
     width: 1.875em;
     cursor: pointer;
-    /* Que tenga la manita cuando nos ponemos encima */
 }
 
 header .hamburguesa div {
@@ -95,13 +88,10 @@ header nav .container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    /* se reparten el espacio uno a la izquierda y otro a la derecha */
-    /* hasta que les definamos medida se reparten el espacio */
 }
 
 header nav .menu {
     width: 100%;
-    /* Poniendole un ancho del 100% al menu los otros dos elementos no caben junto a este e inmediatamente se ponen encima repartiendose el espacio al 50% porque son dos elementos */
     padding-top: 1.25em;
 }
 
@@ -111,18 +101,15 @@ header .logo {
 
 header .menu a {
     display: block;
-    /* Para que toda la zona del enlace sea clicable, no solo la palabra */
     text-align: center;
     padding: 1.25em;
     text-decoration: none;
-    /* eliminamos el subrayado */
     color: #aaa;
     border-bottom: 1px solid #aaa;
     transition: 0.5s;
 }
 
 header .menu a:hover {
-    /* Cuando pasemos con el raton pasara lo que pongaos dentro del hover */
     color: var(--colorprincipal);
     transition: 0.5s;
 }
@@ -182,8 +169,6 @@ header .menu .activo {
 .hero p {
     font-size: 1.15em;
 }
-
-/* Voy a volver a utilizar boton, porque hay otro más abajo, no pondremos .hero .boton, sino que generalizaremos */
 
 .boton {
     display: inline-block;
@@ -636,19 +621,17 @@ width: calc(33.333% - var(--margingrid));
     display: flex;
     flex-wrap: wrap;
     margin: 0 auto;
-    width: 70%;
-    
+    width: 60%; 
   }
 
   #menu .menuizquierda{
-    
     width: calc(40% - var(--margingrid));
   }
 
   #menu .flex{
-   
     width: calc(60% - var(--margingrid));
   }
+
  #menu .flex figure img{
 padding: 20px;
 padding-top: 0px;
@@ -661,9 +644,21 @@ padding-bottom: 0px;
    padding-left: 30px;
    width: 100%;
    padding-top: 0px;
-   
+ 
 }
 
+#menu .menus h3{
+margin-top: 0em;
+max-width: 100%;
+}
+
+.menuizquierda div:last-child{
+margin-bottom: 1.75em;
+}
+
+#menu .orderNow{
+    visibility: hidden;
+}
 }
 /* MEDIAQUERY 1004 PX */
 @media(min-width: 62.750em) {
