@@ -9,6 +9,7 @@
     */
 
 html {
+    /* PARA GENERAR ANIMACIONES DE PUNTOS DE ANCLA */
     scroll-behavior: smooth;
 }
 
@@ -27,10 +28,15 @@ html {
 }
 
 img {
+    /* ESTO DEBE APLICARSE DE FORMA MECANICA SIEMPRE QUE HAYA IMAGENES  */
     width: 100%;
+    /* imagenes adaptarse al 100% de su contenedor */
     height: auto;
     display: block;
+    /* Que se comporte como bloque porque es un elemento en linea */
 }
+
+/* ENCORSETADO: CREAR CLASE GENERICA PARA APLICARLE EL ANCHO MAXIMO, EN ESTE CASO EL QUE HEMOS DEFINIDO EN LA VARIABLE ANCHO MAXIMO */
 
 .container {
     max-width: var(--anchomaximo);
@@ -77,6 +83,7 @@ header nav {
 header .hamburguesa {
     width: 1.875em;
     cursor: pointer;
+    /* Que tenga la manita cuando nos ponemos encima */
 }
 
 header .hamburguesa div {
@@ -88,10 +95,13 @@ header nav .container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    /* se reparten el espacio uno a la izquierda y otro a la derecha */
+    /* hasta que les definamos medida se reparten el espacio */
 }
 
 header nav .menu {
     width: 100%;
+    /* Poniendole un ancho del 100% al menu los otros dos elementos no caben junto a este e inmediatamente se ponen encima repartiendose el espacio al 50% porque son dos elementos */
     padding-top: 1.25em;
 }
 
@@ -101,15 +111,18 @@ header .logo {
 
 header .menu a {
     display: block;
+    /* Para que toda la zona del enlace sea clicable, no solo la palabra */
     text-align: center;
     padding: 1.25em;
     text-decoration: none;
+    /* eliminamos el subrayado */
     color: #aaa;
     border-bottom: 1px solid #aaa;
     transition: 0.5s;
 }
 
 header .menu a:hover {
+    /* Cuando pasemos con el raton pasara lo que pongaos dentro del hover */
     color: var(--colorprincipal);
     transition: 0.5s;
 }
@@ -170,6 +183,8 @@ header .menu .activo {
     font-size: 1.15em;
 }
 
+/* Voy a volver a utilizar boton, porque hay otro más abajo, no pondremos .hero .boton, sino que generalizaremos */
+
 .boton {
     display: inline-block;
     background-color: var(--colorprincipal);
@@ -224,6 +239,7 @@ main section h2 span {
 
 main section .underline {
     position: relative;
+    /* El contenedor siempre en posicion relativa */
     width: 6.250em;
     margin: 0 auto;
     color: var(--colorprincipal);
@@ -233,14 +249,18 @@ main section .underline {
 
 main section .underline hr {
     border-color: var(--colorprincipal);
+    /* La linea al ser un hr se cambia de color con BORDER COLOR */
     position: absolute;
+    /* La x cambia de capa y sube hacia arriba, hay que darle un width para que tenga una medida */
     width: 100%;
     top: -1px;
 }
 
 main section .underline span {
     text-align: center;
+    /* para alinear al centro */
     display: block;
+    /* le damos este display para que funcione */
 }
 
 
@@ -256,15 +276,18 @@ main #ourservices article {
 }
 
 main #ourservices article i:not(.fa-long-arrow-alt-right) {
+    /* pseudoselector not elegimos al i que no queremos atacar */
     color: var(--colorprincipal);
     font-size: 140%;
     border: 1px solid var(--colorprincipal);
     display: inline-block;
+    /* es un elemento en linea, le ponemos display block para ponerle padding*/
     padding: 0.5em;
 }
 
 main #ourservices h3 {
     font-weight: 700;
+    /* para ponerlo en negrita */
     margin: 10px 0;
     font-size: 110%;
 }
@@ -413,7 +436,6 @@ main section p{
     margin-left: 3.125em;
     margin-right: 3.125em;
 }
-
  #menu h2{
     color: white;
  }
@@ -425,7 +447,7 @@ main section p{
 
 .menuizquierda nav ul div{
     display: flex;
-   flex-direction: column;
+    flex-direction: column;   
 }
 
 
@@ -460,6 +482,7 @@ transition: 0.5s;
 }
 
 .menuizquierda div:last-child{
+
 margin-bottom: 3.75em;
 }
 
@@ -469,15 +492,14 @@ margin-bottom: 3.75em;
     font-size: 130%;
 }
 
-#menu .menuizquierda article hr{
- 
- border-color: var(--colorprincipal);
+.menuizquierda article hr{
+    color:var(--colorprincipal);
     width: 65px;
     margin-left: 0;
     margin-top: 10px;
     margin-bottom: 10px;
 }
- 
+
 .menuizquierda article p{
 color: white;
 text-align: justify;
@@ -582,19 +604,20 @@ width: calc(33.333% - var(--margingrid));
  main #ourblog article:last-child{
     width: calc(33.333% - var(--margingrid));
  }
- 
-
 }
 /* MEDIAQUER 768PX*/
 @media(min-width: 48.000em) {
     header .nav-top a span {
         display: inline;
+        /* span es un elemento en linea, no podemos convertilo en block */
         font-size: 110%;
     }
 
     header .nav-top .container {
         justify-content: space-between;
     }
+
+    /* QUEDA PENDIENTE AJUSTAR LOS MARGENES DEL NAV-TOP */
 
     footer {
         text-align: left;
@@ -616,49 +639,6 @@ width: calc(33.333% - var(--margingrid));
  main #ourblog article:last-child{
     width: calc(33.333% - var(--margingrid));
  }
-  
-   #menu .flexmenus{
-    display: flex;
-    flex-wrap: wrap;
-    margin: 0 auto;
-    width: 60%; 
-  }
-
-  #menu .menuizquierda{
-    width: calc(40% - var(--margingrid));
-  }
-
-  #menu .flex{
-    width: calc(60% - var(--margingrid));
-  }
-
- #menu .flex figure img{
-padding: 20px;
-padding-top: 0px;
-padding-bottom: 0px;
- }
- 
-  
-#menu .flex article{
-   display: flex;
-   padding-left: 30px;
-   width: 100%;
-   padding-top: 0px;
- 
-}
-
-#menu .menus h3{
-margin-top: 0em;
-max-width: 100%;
-}
-
-.menuizquierda div:last-child{
-margin-bottom: 1.75em;
-}
-
-#menu .orderNow{
-    visibility: hidden;
-}
 }
 /* MEDIAQUERY 1004 PX */
 @media(min-width: 62.750em) {
@@ -669,6 +649,7 @@ margin-bottom: 1.75em;
     header nav .menu {
         padding-top: 0;
         width: auto;
+        /* Que elija segun el tamaño del elemento ys e adapte al dispositivo que lo contiene */
     }
 
     header nav .menu li {
@@ -679,6 +660,7 @@ margin-bottom: 1.75em;
         border-bottom: none;
         padding: 0.5em 0.5em 0.75em;
     }
+ 
 
 }
 
