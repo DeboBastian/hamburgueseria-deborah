@@ -616,35 +616,41 @@ width: calc(33.333% - var(--margingrid));
  main #ourblog article:last-child{
     width: calc(33.333% - var(--margingrid));
  }
-  
+
    #menu .flexmenus{
     display: flex;
     flex-wrap: wrap;
-    margin: 0 auto;
-    width: 60%; 
+    gap: 10px;
+    width: 100%;
   }
 
   #menu .menuizquierda{
-    width: calc(40% - var(--margingrid));
+    width: calc(30% - 15px);
   }
 
   #menu .flex{
-    width: calc(60% - var(--margingrid));
+    width: calc(70% - 15px);
   }
 
  #menu .flex figure img{
 padding: 20px;
 padding-top: 0px;
-padding-bottom: 0px;
+padding-bottom: 20px;
+
  }
  
   
 #menu .flex article{
    display: flex;
-   padding-left: 30px;
-   width: 100%;
-   padding-top: 0px;
- 
+  gap: 20px;
+  flex-direction: row;
+}
+
+#menu .flex figure div{
+    color: var(--colorprincipal);
+    right: 40px ;
+    margin-top: -180px ;
+    position: absolute;
 }
 
 #menu .menus h3{
